@@ -18,7 +18,7 @@ public class GamePanel extends JPanel implements Runnable{
 
     public final int FPS = 60;
 
-    private KeyHandler keyHandler = new KeyHandler();
+    private final KeyHandler keyHandler = new KeyHandler();
     private Thread gameThread;
 
     int playerX = 100;
@@ -63,7 +63,7 @@ public class GamePanel extends JPanel implements Runnable{
             }
         }*/
 
-        double drawInterval = 1000000000/FPS;
+        double drawInterval = 1000000000.0/FPS;
         double delta = 0;
         long lastTime = System.nanoTime();
         long currentTime;
